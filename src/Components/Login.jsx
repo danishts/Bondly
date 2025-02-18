@@ -38,7 +38,9 @@ const Login = () => {
       <div className="w-full md:w-1/3 flex items-center md:mt-0">
         <div className="w-full md:w-96 p-4 absolute object-cover bg-gray-50 h-auto md:h-[650px] border-0 rounded-3xl">
           <div className="flex flex-col items-center p-4">
+            <div className="h-48">
             <img src={Bondly} alt="icon" className="mb-4 rounded-3xl" />
+            </div>
 
             {/* Heading */}
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
