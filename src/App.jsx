@@ -1,14 +1,28 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import Dashboard from "./Pages/Dashboard";
+import Sidebar from "./Components/Sidebar";
+import Mobilebar from "./Components/Mobilebar";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <h1 className="text-3xl">mdahj</h1>
-      <h1 className="text-3xl">saa</h1>
-      <h1 className="text-3xl">asdsad</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route
+          path="/dashboard"
+          element={
+            <div className="flex">
+              <Sidebar />
+              <Dashboard />
+            </div>
+          }
+        />
+        <Route path="/mobilebar" element={<Mobilebar />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
